@@ -16,7 +16,6 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
 import { Input } from '@/components/ui/input'
-import CopyButton from '@/components/CopyButton.vue'
 import ShareButton from '@/components/ShareButton.vue'
 import Separator from '@/components/ui/separator/Separator.vue'
 import { Icon } from '@iconify/vue'
@@ -96,7 +95,6 @@ const {
             v-model="input"
             @input="setRFromInput"
           />
-          <CopyButton title="text" :value="input" />
           <Button
             variant="ghost"
             class="m-0 mx-3 p-0 hover:bg-transparent"
@@ -109,13 +107,12 @@ const {
         <div class="flex w-full items-center">
           <Input
             class="text-xs"
-            id="text"
+            id="R"
             type="text"
             placeholder="32-byte hex"
             v-model="R"
             @input="clearText"
           />
-          <CopyButton title="text" :value="R" />
           <Button
             variant="ghost"
             class="m-0 mx-3 p-0 hover:bg-transparent"
@@ -128,12 +125,11 @@ const {
         <div class="flex w-full items-center">
           <Input
             class="text-xs"
-            id="invoice"
+            id="pk"
             type="text"
             placeholder="secp256k1 public key"
             v-model="PK"
           />
-          <CopyButton title="invoice" :value="PK" />
         </div>
         <div v-if="shouldValidateNUMS" class="mt-5">
           <div v-if="isNUMS" class="text-green-500 flex items-center justify-center">

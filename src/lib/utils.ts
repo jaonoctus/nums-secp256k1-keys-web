@@ -1,4 +1,3 @@
-import { useClipboard } from '@vueuse/core'
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 import { computed, onBeforeMount, ref } from 'vue'
@@ -6,19 +5,6 @@ import * as secp256k1 from '@noble/secp256k1'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
-}
-
-export function useCopyToClipboard(title: string, value: string) {
-  const { copy, isSupported } = useClipboard()
-
-  function copyToClipboard() {
-    copy(value)
-  }
-
-  return {
-    copyToClipboard,
-    isSupported,
-  }
 }
 
 async function sha256(data: Uint8Array) {
@@ -70,7 +56,6 @@ export function useSecp256k1() {
   async function computeNUMS(R: string) {
     const validatedR = validateAndPadHex(R)
     const H = await generateHXPoint()
-    console.log('H', H)
     const r = secp256k1.etc.bytesToNumberBE(secp256k1.etc.hexToBytes(validatedR))
     const rG = G.multiply(r)
     const pk = H.add(rG)
