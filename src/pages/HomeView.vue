@@ -41,10 +41,10 @@ const {
   <div class="w-full flex items-center justify-center p-4">
     <Card class="w-full max-w-2xl">
       <CardHeader>
-        <CardTitle> NUMS secp256k1 public key </CardTitle>
+        <CardTitle> NUMS secp256k1 </CardTitle>
         <CardDescription class="text-xs">
           <p>
-            If that is unacceptable, pick as internal key a "Nothing Up My Sleeve" (NUMS) point,
+            If you want to force your P2TR to be script-path only, pick as internal key a "Nothing Up My Sleeve" (NUMS) point,
             i.e., a point with unknown discrete logarithm.
           </p>
           <p class="mt-3 flex justify-center">
