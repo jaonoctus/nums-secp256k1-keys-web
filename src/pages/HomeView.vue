@@ -167,7 +167,7 @@ const {
           </div>
           <div v-else class="text-red-500 flex items-center justify-center">
             <Icon icon="lucide:badge-alert" class="mx-2 text-xl" />
-            <span>WRONG! What's behind the hat, huh?</span>
+            <span>Don't trust them. LIAR!</span>
           </div>
         </div>
       </CardContent>
