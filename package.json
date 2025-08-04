@@ -1,6 +1,6 @@
 {
   "name": "nums-secp256k1-keys-web",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -48,7 +48,7 @@
     "@vue/tsconfig": "0.7.0",
     "autoprefixer": "10.4.20",
     "cypress": "13.16.0",
-    "eslint": "9.14.0",
+    "eslint": "9.32.0",
     "eslint-plugin-cypress": "4.1.0",
     "eslint-plugin-vue": "9.30.0",
     "jsdom": "25.0.1",
@@ -62,7 +62,7 @@
     "vite-plugin-node-polyfills": "0.22.0",
     "vite-plugin-singlefile": "2.1.0",
     "vite-plugin-vue-devtools": "7.6.5",
-    "vitest": "2.1.5",
+    "vitest": "2.1.9",
     "vue-tsc": "2.1.10"
   },
   "overrides": {
