@@ -159,14 +159,6 @@ const {
             placeholder="secp256k1 public key"
             v-model="PK"
           />
-          <Button
-            v-if="numsMethod === NUMS_METHOD.TAG"
-            variant="ghost"
-            class="m-0 mx-3 p-0 hover:bg-transparent"
-            @click.prevent="generateRandom"
-          >
-            <Icon icon="lucide:refresh-cw" />
-          </Button>
         </div>
         <div v-if="shouldValidateNUMS" class="mt-5">
           <div v-if="isNUMS" class="text-green-500 flex items-center justify-center">
